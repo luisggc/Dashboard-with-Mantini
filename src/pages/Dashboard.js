@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { AppShell, Burger, Header, MediaQuery, Text, useMantineTheme } from "@mantine/core";
+import { AppShell, Text, useMantineTheme } from "@mantine/core";
 import NavBarDash from "../components/NavBarDash";
+import HeaderDash from "../components/HeaderDash";
 
-export default function Dashboard() {
+function Dashboard() {
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
 
@@ -11,24 +12,11 @@ export default function Dashboard() {
       navbarOffsetBreakpoint="sm"
       fixed
       navbar={<NavBarDash opened={opened} />}
-      header={
-        <Header height={70} padding="md">
-          <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
-            <MediaQuery largerThan="sm" styles={{ display: "none" }}>
-              <Burger
-                opened={opened}
-                onClick={() => setOpened((o) => !o)}
-                size="sm"
-                color={theme.colors.gray[6]}
-                mr="xl"
-              />
-            </MediaQuery>
-            <Text>Application header</Text>
-          </div>
-        </Header>
-      }
+      header={<HeaderDash setOpened={setOpened} theme={theme} opened={opened} />}
     >
       <Text>Resize app to see responsive navbar in action</Text>
     </AppShell>
   );
 }
+
+export default Dashboard;

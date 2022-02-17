@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-      <MantineProvider theme={{ colorScheme }}>
+      <MantineProvider theme={{ colorScheme }} withGlobalStyles>
         <Dashboard />
       </MantineProvider>
     </ColorSchemeProvider>

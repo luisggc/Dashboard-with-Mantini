@@ -6,7 +6,7 @@ function NavBarDash(props) {
   const dark = colorScheme === "dark";
 
   return (
-    <Navbar padding="md" hiddenBreakpoint="sm" hidden={!props.opened} width={{ sm: 300, lg: 400 }}>
+    <Navbar padding="md" hiddenBreakpoint="sm" hidden={!props.opened} width={{ sm: 200 }}>
       <Text>Application navbar</Text>
       <Container>
         <ActionIcon

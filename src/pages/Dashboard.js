@@ -1,12 +1,5 @@
 import { useState } from "react";
-import {
-  AppShell,
-  Burger,
-  Header,
-  MediaQuery,
-  Text,
-  useMantineTheme,
-} from "@mantine/core";
+import { AppShell, Burger, Header, MediaQuery, Text, useMantineTheme } from "@mantine/core";
 import NavBarDash from "../components/NavBarDash";
 
 export default function Dashboard() {
@@ -15,17 +8,12 @@ export default function Dashboard() {
 
   return (
     <AppShell
-      // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
       navbarOffsetBreakpoint="sm"
-      // fixed prop on AppShell will be automatically added to Header and Navbar
       fixed
       navbar={<NavBarDash opened={opened} />}
       header={
         <Header height={70} padding="md">
-          {/* Handle other responsive styles with MediaQuery component or createStyles function */}
-          <div
-            style={{ display: "flex", alignItems: "center", height: "100%" }}
-          >
+          <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
             <MediaQuery largerThan="sm" styles={{ display: "none" }}>
               <Burger
                 opened={opened}
@@ -35,7 +23,6 @@ export default function Dashboard() {
                 mr="xl"
               />
             </MediaQuery>
-
             <Text>Application header</Text>
           </div>
         </Header>

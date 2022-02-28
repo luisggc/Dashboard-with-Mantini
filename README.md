@@ -1,3 +1,17 @@
+# Live demo
+
+Check a live demo here: [https://dashboard-with-mantine.netlify.app/](https://dashboard-with-mantine.netlify.app/)
+
+- Mantine UI Framework
+- Light/Dark Theme
+- Responsive Layout / Media Query
+- React Router
+- NaveBar
+- SideBar
+
+![Light Desktop](light-desktop.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

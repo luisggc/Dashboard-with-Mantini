@@ -1,38 +1,56 @@
 import { Navbar, ScrollArea, Accordion, ThemeIcon } from "@mantine/core";
-import { BlendingModeIcon, CardStackPlusIcon } from "@modulz/radix-icons";
+import {
+  BlendingModeIcon,
+  CardStackPlusIcon,
+  BoxModelIcon,
+  ButtonIcon,
+  CalendarIcon,
+  CameraIcon,
+  CardStackIcon,
+  CardStackMinusIcon,
+  HomeIcon
+} from "@modulz/radix-icons";
+
 import NavButton from "./NavButton";
 
 function NavBarDash({ opened }) {
   return (
-    <Navbar padding="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200 }}>
-      {/*   <Navbar.Section>
-        <Text> Topo </Text>
-      </Navbar.Section> */}
+    <Navbar
+      padding="md"
+      hiddenBreakpoint="sm"
+      hidden={!opened}
+      width={{ sm: 250 }}
+      height="calc(100vh - 70px)"
+    >
       <Navbar.Section grow component={ScrollArea}>
-        <NavButton Icon={BlendingModeIcon} to="/">
+        <NavButton Icon={HomeIcon} to="/">
           Index
         </NavButton>
-        <NavButton Icon={CardStackPlusIcon} to="dashboards">
-          dashboards
+        <NavButton Icon={CardStackMinusIcon} to="page1">
+          Page 1
         </NavButton>
 
-        <NavButton Icon={CardStackPlusIcon} to="hierarchy">
-          Hierarchies
+        <NavButton Icon={CameraIcon} to="page2">
+          Page 2
         </NavButton>
 
         <Accordion disableIconRotation>
           <Accordion.Item
-            label="Customization"
+            label="More Pages Here"
             icon={
               <ThemeIcon color="violet" variant="light">
-                <BlendingModeIcon />
+                <CardStackPlusIcon />
               </ThemeIcon>
             }
           >
-            <NavButton Icon={CardStackPlusIcon}>Olaa</NavButton>
-            <NavButton Icon={CardStackPlusIcon}>Olaa</NavButton>
-            <NavButton Icon={CardStackPlusIcon} disableDivider>
-              Olaa
+            <NavButton Icon={BoxModelIcon} to="page3">
+              Page 3
+            </NavButton>
+            <NavButton Icon={ButtonIcon} to="page4">
+              Page 4
+            </NavButton>
+            <NavButton Icon={CalendarIcon} to="page5" disableDivider>
+              Page 5
             </NavButton>
           </Accordion.Item>
         </Accordion>

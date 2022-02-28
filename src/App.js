@@ -1,4 +1,4 @@
-import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
+import { MantineProvider, ColorSchemeProvider, NormalizeCSS } from "@mantine/core";
 import Dashboard from "./pages/Dashboard";
 import { useLocalStorageValue } from "@mantine/hooks";
 
@@ -14,6 +14,7 @@ export default function App() {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles>
+        <NormalizeCSS />
         <Dashboard />
       </MantineProvider>
     </ColorSchemeProvider>

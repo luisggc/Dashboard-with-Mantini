@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AppShell, Text, useMantineTheme } from "@mantine/core";
 import NavBarDash from "../components/NavBarDash";
 import HeaderDash from "../components/HeaderDash";
+import { Routes, Route } from "react-router-dom";
 
 function Dashboard() {
   const [opened, setOpened] = useState(false);
@@ -14,7 +15,11 @@ function Dashboard() {
       navbar={<NavBarDash opened={opened} />}
       header={<HeaderDash setOpened={setOpened} theme={theme} opened={opened} />}
     >
-      <Text>Resize app to see responsive navbar in action</Text>
+      <Routes>
+        <Route path="/" element={<Text>Dashboard</Text>} />
+        <Route path="dashboards" element={<Text>List of dashboards</Text>} />
+        <Route path="hierarchy" element={<Text>Hierarchy</Text>} />
+      </Routes>
     </AppShell>
   );
 }

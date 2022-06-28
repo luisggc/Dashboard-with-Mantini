@@ -2,7 +2,6 @@ import { Text, ThemeIcon, UnstyledButton, Box, Divider } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 export default function NavButton({ children, Icon, to = "", disableDivider }) {
-  console.log(to);
   return (
     <Link to={to}>
       <Box

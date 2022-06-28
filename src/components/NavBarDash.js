@@ -1,14 +1,12 @@
 import { Navbar, ScrollArea, Accordion, ThemeIcon } from "@mantine/core";
 import {
-  BlendingModeIcon,
   CardStackPlusIcon,
   BoxModelIcon,
   ButtonIcon,
   CalendarIcon,
   CameraIcon,
-  CardStackIcon,
   CardStackMinusIcon,
-  HomeIcon
+  HomeIcon,
 } from "@modulz/radix-icons";
 
 import NavButton from "./NavButton";
